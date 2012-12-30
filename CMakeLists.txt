@@ -209,4 +209,4 @@ else()
 endif()
 
 include(CPack)
-
+set(CMAKE_C_FLAGS_RELEASE "-DNDEBUG -O2 -g")
