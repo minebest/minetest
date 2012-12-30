@@ -195,7 +195,7 @@ collisionMoveResult collisionMoveSimple(Map *map, IGameDef *gamedef,
     ScopeProfiler sp(g_profiler, "collisionMoveSimple avg", SPT_AVG);
 
 	collisionMoveResult result;
-
+	dtime = MYMIN(dtime,0.5);
 	/*
 		Calculate new velocity
 	*/
