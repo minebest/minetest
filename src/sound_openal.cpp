@@ -92,7 +92,9 @@ static ALenum warn_if_error(ALenum err, const char *desc)
 {
 	if(err == AL_NO_ERROR)
 		return err;
+#ifdef NOTDEF
 	errorstream<<"WARNING: "<<desc<<": "<<alErrorString(err)<<std::endl;
+#endif
 	return err;
 }
 
@@ -170,12 +172,14 @@ SoundBuffer* loadOggFile(const std::string &filepath)
 
 	ALenum error = alGetError();
 
+#ifdef NOTDEF
 	if(error != AL_NO_ERROR){
 		infostream<<"Audio: OpenAL error: "<<alErrorString(error)
 				<<"preparing sound buffer"<<std::endl;
 	}
 
 	infostream<<"Audio file "<<filepath<<" loaded"<<std::endl;
+#endif
 
 	// Clean up!
 	ov_clear(&oggFile);
