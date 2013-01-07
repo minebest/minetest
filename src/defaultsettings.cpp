@@ -56,6 +56,8 @@ void set_default_settings(Settings *settings)
 	settings->setDefault("anaglyph", "false");
 	settings->setDefault("anaglyph_strength", "0.1");
 	settings->setDefault("aux1_descends", "false");
+	settings->setDefault("doubletap_jump", "false");
+	settings->setDefault("always_fly_fast", "true");
 
 	// Some (temporary) keys for debugging
 	settings->setDefault("keymap_print_debug_stacks", "KEY_KEY_P");
@@ -121,6 +123,7 @@ void set_default_settings(Settings *settings)
 	settings->setDefault("trilinear_filter", "false");
 	settings->setDefault("preload_item_visuals", "true");
 	settings->setDefault("enable_shaders", "2");
+	settings->setDefault("repeat_rightclick_time", "0.25");
 
 	settings->setDefault("media_fetch_threads", "8");
 

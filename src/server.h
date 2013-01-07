@@ -584,7 +584,7 @@ public:
 	}
 
 	Map & getMap() { return m_env->getMap(); }
-
+	bool showFormspec(const char *name, const std::string &formspec, const std::string &formname);
 private:
 
 	// con::PeerHandler implementation.
@@ -622,6 +622,7 @@ private:
 	void SendMovePlayer(u16 peer_id);
 	void SendPlayerPrivileges(u16 peer_id);
 	void SendPlayerInventoryFormspec(u16 peer_id);
+	void SendShowFormspecMessage(u16 peer_id, const std::string formspec, const std::string formname);
 	/*
 		Send a node removal/addition event to all clients except ignore_id.
 		Additionally, if far_players!=NULL, players further away than
